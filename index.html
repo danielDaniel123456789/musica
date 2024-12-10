@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones con Bootstrap</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    body{
+        background-color: black;
+        color: white;
+    }
+</style>
+
+<body>
+
+
+    <div class="container my-5 text-center">
+
+        <div >
+            <div>
+                <img src="./img/fotodaniel.png" alt="">
+            </div>
+            <div>
+                <h4>En el 2010 fui operado de un tumor cerebral. En ese momento tan difícil, grabé algunas canciones. Gracias a
+                    Dios, hoy, en 2024, estoy sano. Toda la honra y gloria sean para Dios, siempre fiel y firme.</h4>
+            </div>
+        </div>
+       
+      
+     
+
+        <div class="row">
+
+            <!-- Canción 2 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Tiempos de bendición</h5>
+                        <audio controls class="audio-player w-100">
+                            <source src="musica/2----Tiempos de Bendición.mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <!-- Canción 3 -->
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">En las alturas me pondrás</h5>
+                        <audio controls class="audio-player w-100">
+                            <source src="musica/3----En Las Alturas me pondras (Ver.Final).mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Canción 4 -->
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">El favor de Jehová</h5>
+                        <audio controls class="audio-player w-100">
+                            <source src="musica/4----El favor de Jehova.mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <!-- Canción 5 -->
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">La vida avanza</h5>
+                        <audio controls class="audio-player w-100">
+                            <source src="musica/6----La Vida Avanza.mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+            <!-- Canción 6 -->
+            <div class="col-md-6">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">Acuérdate de mí</h5>
+                        <audio controls class="audio-player w-100">
+                            <source src="musica/7--- Acuerdate de Mi.mp3" type="audio/mp3">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Canción 1 -->
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Días de refrigerio</h5>
+                    <audio controls class="audio-player w-100">
+                        <source src="musica/1---- Avance dias de Refrigerio.mp3" type="audio/mp3">
+                        Tu navegador no soporta el elemento de audio.
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- JavaScript to control audio playback -->
+    <script>
+        // Obtener todos los elementos de audio
+        const audios = document.querySelectorAll('.audio-player');
+
+        // Agregar evento 'play' a cada uno
+        audios.forEach(audio => {
+            audio.addEventListener('play', () => {
+                // Pausar todos los audios excepto el que se está reproduciendo
+                audios.forEach(otherAudio => {
+                    if (otherAudio !== audio) {
+                        otherAudio.pause();
+                        otherAudio.currentTime = 0; // Reiniciar el audio pausado
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
